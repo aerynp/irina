@@ -1,6 +1,6 @@
 /// <reference types="cypress" />    
 
-import { GoogleSearch } from '../../page_objects/google_search.page';
+import { GoogleSearch } from '../page_objects/google_search.page';
 
 
 
@@ -20,7 +20,7 @@ describe("Check user is able to search by specific option", () => {
     it("Search by random text", () =>{
         console.log("We are searching")
         cy.get('input[name="q"]').type("Moldova")
-        cy.contains('input[name="btnK"]').click()
+        setTimeout(()=> { cy.contains('input[name="btnK"]').click()}, 3000)
     })
 
 })
